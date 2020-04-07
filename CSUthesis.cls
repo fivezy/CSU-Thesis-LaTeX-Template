@@ -443,7 +443,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 %               {sep}%定义标题和标号之间的水平距离
 %               {before-code}%定义标题前的内容
 %               [after-code]%定义标题后的内容
-\titleformat{\section}{\zihao{3} \bfseries \heiti}{\thesection}{1em}{}
+\titleformat{\section}{\zihao{3} \bfseries \heiti}{第\thesection 章}{1em}{\centering} % 正文章名居中
 \titleformat{\subsection}{\zihao{4} \bfseries \heiti}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\zihao{-4} \bfseries \songti}{\thesubsubsection}{1em}{}
 \titleformat{\paragraph}{\zihao{-4} \songti}{\theparagraph}{1em}{}
@@ -457,22 +457,39 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 %               {无序号标题}
 %               {指引线与页码}
 %               [下间距]
+
+
+% \titlecontents{section}[4em]{\bfseries \zihao{5} \vspace{10pt}}{\contentslabel{4em}}{\hspace*{-4em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+% \titlecontents{subsection}[4em]{\zihao{5}}{\contentslabel{2em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+% \titlecontents{subsubsection}[7em]{\zihao{5}}{\contentslabel{3em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+% \titlecontents{paragraph}[11em]{\zihao{5}}{\contentslabel{4em}}{\hspace*{-2em}}{~\titlerule*[0.6pc]{$.$}~\contentspage}
+
+
+
 \titlecontents{section}
-              [0.75em] % 按样例目录左侧是和前置部分文字左侧对齐的
-              {\zihao{-4} \songti}
-              {\contentslabel {1em}}
-              {\hspace*{-1em}}
-              {\titlerule*[0.5pc]{.}\contentspage}
+               [0pt]
+               {\zihao{-4} \heiti} % 章名设置为黑小四
+               {\contentspush{第\thecontentslabel\ 章\quad}} % 第x章
+               {}
+               {\titlerule*[0.5pc]{.}\contentspage}
+% \titlecontents{section}
+%               [0.75em] % 按样例目录左侧是和前置部分文字左侧对齐的
+%               {\zihao{-4} \songti}
+%             %   {}
+%               {\contentslabel{1em}}
+%             % {第\thesection 章}
+%               {\hspace*{-1em}}
+%               {\titlerule*[0.5pc]{.} ~\contentspage}
 
 \titlecontents{subsection}
-    [2.5em]
+    [3.2em]
     {\zihao{-4} \songti} % note that 3.8 = 1.5 + 2.3
     {\contentslabel{2.2em}}
     {\hspace*{-3.5em}}
     {\titlerule*[0.5pc]{.}\contentspage}
 
 \titlecontents{subsubsection}
-    [4em]
+    [6em]
     {\zihao{-4} \songti} % note that 3.8 = 1.5 + 2.3
     {\contentslabel{3.0em}}
     {\hspace*{-5em}}

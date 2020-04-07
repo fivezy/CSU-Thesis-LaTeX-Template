@@ -84,6 +84,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 中文摘要
 % -----------------------------------------------%
+\pagenumbering{Roman} % 重摘要至目录部分页码为大写罗马字体
+\setcounter{page}{1} % 页码从I重新开始
 \include{content/abstractcn}
 \newpage
 
@@ -96,8 +98,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 正文页眉页脚
 % -----------------------------------------------%
-\setcounter{page}{1} % 重置目录页码为小写罗马字体
-\pagenumbering{roman} % 设置页码为小写罗马字体
+
+% \setcounter{page}{1} % 重置目录页码为小写罗马字体
+% \pagenumbering{roman} % 设置页码为小写罗马字体
 % 设置页眉和页脚 %
 \pagestyle{fancy}
 \fancyhf[CF]{\thepage} % 所有（奇数和偶数）中间页脚
@@ -107,7 +110,8 @@
 {
 \renewcommand{\contentsname}{\hfill \heiti \zihao{3} 目\quad 录\hfill}  
 	\renewcommand*{\baselinestretch}{1.2}   % 行间距
-    \tableofcontents
+	\addcontentsline{toc}{section}{目录} % 在目录中添加目录页码.
+	\tableofcontents
 }
 \newpage
 
