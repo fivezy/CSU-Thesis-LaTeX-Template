@@ -396,6 +396,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 }
 % 显示中文关键词和分类号
 {
+	\vspace{1.5cm}
     \begin{flushleft}
         \noindent {\zihao{4} \bfseries \heiti 关键词：} {\zihao{4} \songti \@keywordscn} \par % 关键词为四号黑体，内容为四号宋体
         \noindent {\zihao{4} \bfseries \heiti 分类号：} {\zihao{4} \songti \@categorycn} \par % 分类号为四号黑体，内容为四号宋体
@@ -420,6 +421,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     \zihao{4} \noindent % 内容为四号宋体
 }
 {
+	\vspace{1.5cm}
     \begin{flushleft}
         \noindent {\zihao{4} \bfseries Keywords:~} {\zihao{4} \@keywordsen} \par % 关键词为四号黑体，内容为四号宋体
         \noindent {\zihao{4} \bfseries Classification:~} {\zihao{4} \@categoryen} \par % 分类号为四号黑体，内容为四号宋体
