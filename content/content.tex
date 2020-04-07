@@ -1,6 +1,9 @@
 %!TEX root = ../csuthesis_main.tex
 % 论文正文是主体，主体部分应从另页右页开始，每一章应另起页。一般由序号标题、文字叙述、图、表格和公式等五个部分构成。
 \section{绪论}
+
+Word不难用，但是想用得漂亮还得费一番功夫。本文提供标准的学位论文 Latex 模板，让排版从此无忧。
+
 \subsection{研究背景与意义}
 
 \subsubsection{研究背景}
@@ -14,7 +17,7 @@ Word不难用，但是想用得漂亮还得费一番功夫。
 插入参考文献，手动编辑？我的天哪，一百多个文献，中间插一个，怎么改序号？
 很好，可以用交叉引用，一个个编辑文献格式？
 很好，可以用endnote或者noteexpress的插入功能，你有没有发现插入是个宏，ctrl+z的时候会烦死你啊……
-叮叮！让我们祭出LaTeX！！，有bibliography，一个$\\cite$包打天下！不要太爽。
+叮叮！让我们祭出LaTeX！！，有bibliography，一个 $\\cite$ 包打天下！不要太爽。
 
 插入公式，对word小白来说，公式居中编号靠右就是一道百度搜索能力过滤器。
 
@@ -22,19 +25,17 @@ word里编辑三线表，啊烦躁。
 
 等等等等……
 
+\paragraph{哪些便利}
+
 让我们，专心写论文好不好？
+
+\subparagraph{参考文献}
 
 爱你们。
 
-\paragraph{Latex 起源}
-
 等等等等……
 
-\subparagraph{Latex 诞生地}
-
-等等等等……
-
-\subparagraph{Latex 创始人}
+\subparagraph{三线表}
 
 等等等等……
 
@@ -263,35 +264,35 @@ LaTeX\cite{lamport1994latex}插入参考文献最方便的方式是使用bibliog
 \section{总结与展望}
 
 \noindent{纯数字编号}
-\begin{enumerate}[leftmargin=2em]
+\begin{enumerate}[itemindent=2em]
  \item XXXXXXXXXX
  \label{item1}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 罗马编号
-\begin{enumerate}[label=(\roman*),leftmargin=2em]
+\begin{enumerate}[label=(\roman*),itemindent=2em]
  \item XXXXXXXXXX
  \label{item2}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 括号编号
-\begin{enumerate}[label=(\arabic*),leftmargin=2em]
+\begin{enumerate}[label=(\arabic*),itemindent=2em]
  \item XXXXXXXXXX
  \label{item3}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 半括号编号
-\begin{enumerate}[label=\arabic*),leftmargin=2em]
+\begin{enumerate}[label=\arabic*),itemindent=2em]
  \item XXXXXXXXXX
  \label{item4}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 小字母编号
-\begin{enumerate}[label=\alph*),leftmargin=2em]
+\begin{enumerate}[label=\alph*),itemindent=2em]
  \item XXXXXXXXXX
  \label{item5}
  \item XXXXXXXXXX
