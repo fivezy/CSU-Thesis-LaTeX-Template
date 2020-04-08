@@ -16,12 +16,13 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 ![cover](images/cover.png)
 
-1. 封面、扉页；
+0. 封面（无效，需使用学校要求的彩色版、铜版纸打印）；
+1. 扉页；
 2. 学位论文原创性声明和版权使用授权书；
 3. 中文摘要；
 4. 英文摘要；
 5. 目录；
-6. 符号说明（必要时）；
+6. 图表索引（必要时）；
 7. 论文正文；
 8. 参考文献；
 9. 附录（必要时）；
@@ -30,13 +31,9 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 ## 版本状况
 
-完整支持学术学位博士论文。
+完整支持学术学位博士、硕士论文。
 
 其他涉密、定向等可能需要修改封面的情况，需要自行修改`CSUthesis.cls`文件。
-
-硕士也可按需修改`CSUthesis.cls`文件。
-
-以后版本会增加支持各类学位的配置文件（如果我有空的话）。
 
 ## 文件介绍
 
@@ -57,7 +54,7 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 所有论文的编辑内容在这里。
 
-`info.tex`：论文的各种信息，标题姓名学院之类的。添加盲审格式输出，根据需求注释/保留 `\blindreviewtrue`和 `\blindreviewfalse`，输出盲审送审版本和正式版本。
+`config.tex`：论文的基本配置，包含标题、姓名、学院等各种信息。可根据需要启用盲审格式、图表索引：其中注释/保留 `\blindreviewtrue`和 `\blindreviewfalse`，输出盲审送审版本和正式版本；注释/保留 `\needfoltoltrue`和 `\needfoltolfalse`，输出含图表索引及不含图表索引的版本；。
 
 `abstactcn.tex`和`abstracten.tex`：顾名思义。
 
@@ -80,16 +77,7 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 测试环境：TexMaker & TexLive in Linux & Windows, xelatex is used to compile.
 
-`Linux`
-```bash
-# 单次编译
-make
-# 持续集成
-make pvc
-```
-或者
-请使用`xelatex`，对`csuthesis_main.tex`文件进行编译。
-Windows下可以使用`TexMaker`,`TexStudio`等IDE，选中`xelatex`编译器进行编译。
+安装`TexLive`支持包，使用`TexMaker`、`TexStudio`等IDE，选中`xelatex`编译器进行编译。
 使用高级文本编辑器，如sublime等，否则可能因为ANSI、UTF-8等编码格式问题编译失败。
 
 

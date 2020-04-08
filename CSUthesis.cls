@@ -166,6 +166,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}                     % 导师
 \newcommand*{\subsupervisor}[1]{\gdef\@subsupervisor{#1}}               % 副导师
 \newcommand*{\studentid}[1]{\gdef\@studentid{#1}}                       % 学号
+\newcommand*{\thesistype}[1]{\gdef\@thesistype{#1}}                     % 学位论文类型
+\newcommand*{\thesistypefinal}{\@thesistype}                     % 学位论文类型
 
 \newcommand*{\clcnumber}[1]{\gdef\@clcnumber{#1}}                       % 中图分类号 Chinese Library Classification
 \newcommand*{\schoolcode}[1]{\gdef\@schoolcode{#1}}                     % 学校代码
@@ -208,7 +210,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
         \centering
         \linespread{1.5}
         \vspace*{1.5cm}
-        {\zihao{-2} \bfseries \heiti 博士学位论文 \par} % 小二号黑体
+        {\zihao{-2} \bfseries \heiti \thesistypefinal \par} % 小二号黑体
         \vspace{2cm} % 两个空行
         {\zihao{2} \bfseries \heiti \@titlecn \par} % 二号黑体
         {\zihao{-2}\bfseries \TimesNewRoman \@titleen \par} % 小二号，timesnewroman
@@ -264,7 +266,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
             \zihao{-2}
             % 注意centering的使用，只在局部环境中使用。
             \vspace{2ex} % 空行
-            { \bfseries \heiti 博士学位论文 \par} % 小二号黑体加粗
+            { \bfseries \heiti \thesistypefinal \par} % 小二号黑体加粗
             \vspace{5ex} % 空行
             {\zihao{2} \bfseries \heiti \@titlecn \par} % 中文标题二号黑体加粗
             { \bfseries \TimesNewRoman \@titleen \par} % 英文标题小二号 Times New Roman，加粗
@@ -705,7 +707,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \pagestyle{fancy}
 % \fancyhf{} % 清空原有格式
 % \fancyhf[RH]{\small\leftmark} % 设置所有（奇数和偶数）右侧页眉
-% \fancyhf[LH]{中南大学博士学位论文} % 设置所有（奇数和偶数）左侧页眉
+% \fancyhf[LH]{中南大学\thesistypefinal} % 设置所有（奇数和偶数）左侧页眉
 % \fancyhf[CF]{\thepage} % 所有（奇数和偶数）中间页脚
 
 \endinput
