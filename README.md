@@ -1,5 +1,7 @@
 # 中南大学学位论文Tex模版
 
+Forked from GuoDaXia, thx.
+
 ## 项目起源
 
 LaTeX利用设置好的模板，可以编译为格式统一的pdf。
