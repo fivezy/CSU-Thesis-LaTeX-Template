@@ -207,7 +207,7 @@
 
 % section 标题从这里往后改为三号黑体居中
 \titleformat{\section}{\centering \zihao{3} \bfseries \heiti}{\thesection}{1em}{}
-\titlespacing*{\section} {0pt}{18pt}{32pt}
+\titlespacing*{\section} {0pt}{17pt}{34pt}
 
 % \section{参考文献} % bibliography会自动显示参考文献四个字
 \addcontentsline{toc}{section}{参考文献} % 由于参考文献不是section，这句把参考文献加入目录
@@ -215,10 +215,11 @@
 % cls文件中已经引入package，这里不需要调用 \bibliographystyle 了。
 % \bibliographystyle{gbt7714-2005} 
 	{~}
-    \vspace{-10pt}
+    \vspace{-16pt}
 \bibliography{thesis-references}
 \newpage
-
+\titleformat{\section}{\centering \zihao{3} \bfseries \heiti}{\thesection}{1em}{}
+\titlespacing*{\section} {0pt}{18pt}{32pt}
 \titleformat{\subsection}{\zihao{-4} \songti}{\thesubsection}{1em}{}
 \titlespacing*{\subsection} {2em}{0pt}{0pt}
 \titleformat{\subsubsection}{\zihao{-4} \songti}{\thesubsubsection}{1em}{}
