@@ -16,31 +16,6 @@
 %\def\cite{\stepcounter{citesnum}\oldcite}
 %\total{citesnum}
 
-%算法
-%\begin{algorithm}[t]
-%\caption{algorithm caption} %算法的名字
-%\hspace*{0.02in} {\bf Input:} %算法的输入， \hspace*{0.02in}用来控制位置，同时利用 \\ 进行换行
-%input parameters A, B, C\\
-%\hspace*{0.02in} {\bf Output:} %算法的结果输出
-%output result
-%\begin{algorithmic}[1]
-%\State some description % \State 后写一般语句
-%\For{condition} % For 语句，需要和EndFor对应
-%	\State ...
-%	\If{condition} % If 语句，需要和EndIf对应
-%		\State ...
-%	\Else
-%		\State ...
-%	\EndIf
-%\EndFor
-%\While{condition} % While语句，需要和EndWhile对应
-%	\State ...
-%\EndWhile
-%\State \Return result
-%\end{algorithmic}
-%\end{algorithm}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 前置部分的页眉页脚设置
 % -----------------------------------------------%
@@ -129,16 +104,51 @@
 	\renewcommand*{\baselinestretch}{1.3841}   % 行间距20pt
 	\renewcommand{\contentsname}{\hfill \heiti \zihao{3} 目\quad 录\hfill ~\\}
 	\addcontentsline{toc}{section}{目录} % 在目录中添加目录页码.
-	~
+	{~}
     \vspace{-16pt}
 	\tableofcontents
 }
 \newpage
+	
+	% 插图索引
+	% -------------------------------------------%
+	{
+		\setlength{\baselineskip}{20pt}         % 基准行间距
+		\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+		{~}
+    		\vspace{-10pt}
+		\renewcommand{\listfigurename}{\hfill \heiti \zihao{3} 插图索引\hfill ~\\}  
+		\addcontentsline{toc}{section}{插图索引} % 在目录中添加插图索引页码.
+		%%设置插图索引的 图 标签
+		\let\oldnumberline\numberline%
+		\renewcommand{\numberline}{\figurename~\oldnumberline}
+		%增加图目录
+		\listoffigures
+	}
+	
+	\newpage
+	
+	% 表格索引
+	% -------------------------------------------%
+	{
+		\setlength{\baselineskip}{20pt}         % 基准行间距
+		\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
+		{~}
+    		\vspace{-10pt}
+		\renewcommand{\listtablename}{\hfill \heiti \zihao{3} 表格索引\hfill ~\\}  
+		\addcontentsline{toc}{section}{表格索引} % 在目录中添加表格索引页码.
+		%%设置表格索引的 表 标签
+		\let\oldnumberline\numberline%
+		\renewcommand{\numberline}{\tablename~\oldnumberline}
+		%增加表目录
+		\listoftables
+	}
+	
+	\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 正文页眉页脚
 % -----------------------------------------------%
-
 
 \renewcommand{\headrulewidth}{1pt}
 
@@ -201,7 +211,7 @@
 % \nocite{*} % 该命令用于显示全部参考文献，即使文中没引用
 % cls文件中已经引入package，这里不需要调用 \bibliographystyle 了。
 % \bibliographystyle{gbt7714-2005} 
-	~
+	{~}
     \vspace{-10pt}
 \bibliography{thesis-references}
 \newpage

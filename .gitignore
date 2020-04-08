@@ -25,3 +25,5 @@
 .git/
 .vscode/
 *.thm
+*.lof
+*.lot

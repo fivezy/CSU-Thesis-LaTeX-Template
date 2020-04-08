@@ -10,7 +10,7 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 本项目的目的是为了创建一个符合中南大学研究生学位论文（博士）撰写规范的TeX模板，解决学位论文撰写时格式调整的痛点。
 
-本模板依照[《中南大学研究生学位论文撰写规范》中大研字【2016】166号](http://gra.its.csu.edu.cn/yjsy/pygl/wjtzxq54858_3_6.html)编写。
+本模板依照[《中南大学研究生学位论文撰写规范》中大研字【2020】30号编写。
 
 ## 主要内容
 
@@ -77,6 +77,8 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 放图片，模板已经配置了相对路径，所以在文中插图片时，直接用images目录下的相对路径即可，比如`images/csu.png`，在正文中插入只需要`csu.png`。
 
 ## 编译
+
+测试环境：TexMaker & TexLive in Linux & Windows, xelatex is used to compile.
 
 `Linux`
 ```bash

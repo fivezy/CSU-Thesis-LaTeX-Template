@@ -313,14 +313,14 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 2. 原创性声明和学位论文版权使用授权书 
 % -----------------------------------------------%
 % 单独设一页，排在扉页后
-% 按模板，标题二号，内容四号，这里学校没有特别强调字体字号，
-% 应该有一定自由度。
+% 按模板，标题二号加粗，内容四号，学校要求用下发的模板不能改动，
+% 已按要求排版。
 
 \newcommand{\announcement}{
     % 按学校模板这里是华文新魏字体
 
     \linespread{1.45} % 这部分的行间距跟正文不一样
-    ~
+    {~}
     \vspace{10pt}
 
     {\centering \zihao{2} \bfseries \huawenxinwei 学位论文原创性声明 \par}
@@ -334,7 +334,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
         申请学位论文与资料若有不实之处，本人承担一切相关责任。
 
-    		~
+    		{~}
     		\vspace{10pt}
 
         %\begin{flushright}
@@ -359,7 +359,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
         保密论文待解密后适应本声明。
 
-    		~
+    		{~}
     		\vspace{10pt}
 
         \begin{table}[!ht]
@@ -396,7 +396,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newenvironment{abstractcn} { % 定义中文摘要环境
 	\setlength{\baselineskip}{20pt}         % 基准行间距
 	\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
-	~
+	{~}
     \vspace{-3pt}
     \begin{center} \zihao{3} \bfseries \heiti \@titlecn \end{center}
     \vspace{23pt}
@@ -425,7 +425,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newenvironment{abstracten} { % 新建英文摘要环境
 	\setlength{\baselineskip}{20pt}         % 基准行间距
 	\renewcommand{\baselinestretch}{1.0}   % 几倍行间距
-	~
+	{~}
     \vspace{-3pt}
     \begin{center}\TimesNewRoman \zihao{3} \bfseries \@titleen \end{center}
     \vspace{23pt}
@@ -667,14 +667,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newtheorem*{proof}{\it{\csu@cap@proof}}
 \newtheorem{solution}{\csu@cap@solution}
 
-
-
 % 编号分章节。如需要连续编号，注释\makeatletter下面对应内容即可。
 \renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
 \makeatletter
 \@addtoreset{figure}{section}
 \@addtoreset{table}{section}
 \@addtoreset{equation}{section}
+%取消插图索引、表格索引的左缩进
+\renewcommand*\l@figure{\@dottedtocline{1}{0em}{2.3em}}% Default: 1.5em/2.3em
+\let\l@table\l@figure
 \makeatother
 
 % 8. 参考文献 %

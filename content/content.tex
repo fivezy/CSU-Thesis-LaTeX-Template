@@ -252,6 +252,30 @@ word里编辑三线表，啊烦躁。
 
 \newpage
 
+\section{算法插入示例}
+
+如算法\ref{alg:myalgorithm}第\ref{code:someline}行所示，……
+\begin{algorithm}
+\caption{algorithm caption} %算法的名字
+\hspace*{0.02in} \textbf{Input:} Input parameters A, B, C.\\
+\hspace*{0.02in} \textbf{Initialization:} Initialization parameters.\\
+\hspace*{0.02in} \textbf{Output:} Output result.
+\begin{algorithmic}[1]
+	\State some description % \State 后写一般语句
+	\State \textbf{If} {condition} \textbf{then}
+	\label{code:someline}  
+	 	\State \quad {coding;}
+	\State \textbf{Else}
+	 	\State \quad {coding;}
+	 	\State \quad {coding;}
+	\State \textbf{EndIf}
+	\State \textbf{Return} {result}
+\end{algorithmic}
+\label{alg:myalgorithm}
+\end{algorithm}
+
+\newpage
+
 \section{参考文献插入示例}
 
 LaTeX\cite{lamport1994latex}插入参考文献最方便的方式是使用bibliography\cite{pritchard1969statistical}，大多数出版商的论文页面都会有导出bib格式参考文献的链接，把每个文献的bib放入``thesis-references''，然后用bibkey即可插入参考文献。
