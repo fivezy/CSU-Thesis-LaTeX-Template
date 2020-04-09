@@ -332,7 +332,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     \setlength{\parindent}{2em} % 首行缩进
     {
         \zihao{4}
-        本人郑重声明，所呈交的学位论文是本人在指导教师指导下进行的研究工作及取得的研究成果。尽我所知，除了论文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得中南大学或其他教育机构的学位或证书而使用过的材料。与我共同工作的同志对本研究所作的贡献均已在论文中作了明确的说明。
+        本人郑重声明，所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。尽我所知，除了论文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得中南大学或其他教育机构的学位或证书而使用过的材料。与我共同工作的同志对本研究所作的贡献均已在论文中作了明确的说明。
 
         申请学位论文与资料若有不实之处，本人承担一切相关责任。
 
@@ -573,21 +573,22 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
 % \renewcommand{\thefigure} {\thesection-\arabic{figure}}
 
-%\captionsetup[subfigure]{labelfont=bf,labelsep=period,labelformat=mysublabelfmt}
-\renewcommand\p@subfigure{\thefigure{-}}
-%\renewcommand\thesubfigure{\alph{subfigure})}
-%\DeclareCaptionLabelFormat{mysublabelfmt}{\alph{sub\@captype}}
-
-% If desired for table as well:
-% \renewcommand\p@subtable{\thetable\,}
-% \renewcommand\thesubtable{\alph{subtable})}
-
 \captionsetup[figure]{
 	format=plain,      % 标题从第二行开始是否缩进，plain无缩进，hang有缩进
 	labelsep=quad,     % 分隔符是一个空格
 	font={kai,five},   % 图的字体, 宋体小四
 	position=bottom    % position=bottom, 不代表标题放在下面, 标题仍放在你放\caption的位置.
 }
+
+%\captionsetup[subfigure]{labelfont=bf,labelsep=period,labelformat=mysublabelfmt}
+\renewcommand\p@subfigure{\thefigure{-}}
+%\renewcommand\thesubfigure{\alph{subfigure})}
+%\DeclareCaptionLabelFormat{mysublabelfmt}{\alph{sub\@captype}}
+
+% If desired for table as well:
+\renewcommand\p@subtable{\thetable{-}}
+% \renewcommand\thesubtable{\alph{subtable})}
+
 % 表格格式
 % ------------------------------------------------------%
 \renewcommand{\thetable}{\arabic{section}-\arabic{table}}

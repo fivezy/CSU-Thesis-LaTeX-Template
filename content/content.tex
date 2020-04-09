@@ -228,6 +228,38 @@ word里编辑三线表，啊烦躁。
 
 \textbf{表格如表\ref{T.example}所示，latex表格技巧很多，这里不再详细介绍。}
 
+OK，再举个例子，表格并列。若太宽，还可以用`adjustbox`加以旋转，如表\ref{table:1b}。
+
+\begin{table}[htp]
+	\centering
+	\begin{subtable}[t]{2in}
+		\centering
+		\caption{标题1}\label{table:1a}
+		\begin{tabular}{|l|l|l|}
+		\hline
+		100 & 200 & 300\\
+		\hline
+		400 & 500 & 600\\
+		\hline
+		\end{tabular}
+	\end{subtable}
+	\quad
+	\begin{subtable}[t]{2in}
+		\centering
+		\caption{标题2}\label{table:1b}
+		\begin{adjustbox}{angle=90}
+		\begin{tabular}{|l|l|l|}
+		\hline
+		100 & 200 & 300\\
+		\hline
+		400 & 500 & 600\\
+		\hline
+		\end{tabular}
+		\end{adjustbox}
+	\end{subtable}
+	\caption{主表标题}\label{table:1}
+\end{table}
+
 \lipsum
 
 \newpage
