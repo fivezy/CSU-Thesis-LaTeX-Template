@@ -56,13 +56,10 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 所有论文的编辑内容在这里。
 
-`config.tex`：论文的基本配置，包含标题、姓名、学院等各种信息。可根据需要启用盲审格式、图表索引：其中注释/保留 `\blindreviewtrue`和 `\blindreviewfalse`，输出盲审送审版本和正式版本；注释/保留 `\needfoltoltrue`和 `\needfoltolfalse`，输出含图表索引及不含图表索引的版本；。
-
-`abstactcn.tex`和`abstracten.tex`：顾名思义。
-
-`content.tex`：从绪论到总结的全部正文内容。`\cite`的时候可能因为tex文件与主文件分离，LaTeX环境配置不到位，会有找不到bib的提示（Texlive+sublime会这样），没关系，照常插入需要的bibkey即可。
-
-`additional.tex`：成果、致谢、附录之类的。
+0. `config.tex`：论文的基本配置，包含标题、姓名、学院等各种信息。可根据需要启用盲审格式、图表索引：其中注释/保留 `\blindreviewtrue`和 `\blindreviewfalse`，输出盲审送审版本和正式版本；注释/保留 `\needfoltoltrue`和 `\needfoltolfalse`，输出含图表索引及不含图表索引的版本。
+1. `abstactcn.tex`和`abstracten.tex`：顾名思义。
+2. `content.tex`：从绪论到总结的全部正文内容。`\cite`的时候可能因为tex文件与主文件分离，LaTeX环境配置不到位，会有找不到bib的提示（Texlive+sublime会这样），没关系，照常插入需要的bibkey即可。
+3. `additional.tex`：成果、致谢、附录之类的。
 
 
 ### `csuthesis_main.tex`
@@ -79,8 +76,11 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 测试环境：TexMaker & TexLive in Linux & Windows, xelatex is used to compile.
 
-安装`TexLive`支持包，使用`TexMaker`、`TexStudio`等IDE，选中`xelatex`编译器进行编译。
-使用高级文本编辑器，如sublime等，否则可能因为ANSI、UTF-8等编码格式问题编译失败。
+编译步骤：安装`TexLive`支持包，使用`TexMaker`、`TexStudio`等IDE，选中`xelatex`编译器进行编译。
+
+注意：
+1. 除`TexMaker`等IDE外，请使用如sublime等高级编辑器，否则可能因为ANSI、UTF-8等编码格式问题编译失败；
+2. 使用MiKTex包而不是TexLive时，图片请`不要使用` eps 格式，MiKTex包的xelatex编译器”no Encapsulated PostScript (EPS) graphics are supported”。
 
 
 ## 一些毕业流程上与word差异的考虑
