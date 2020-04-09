@@ -431,7 +431,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     \vspace{-3pt}
     \begin{center}\TimesNewRoman \zihao{3} \bfseries \@titleen \end{center}
     \vspace{23pt}
-    \noindent {\TimesNewRoman \zihao{4} \bfseries Abstract:~} % 摘要俩字为四号黑体
+    \noindent {\TimesNewRoman \zihao{4} \bfseries Abstract:} % 摘要俩字为四号黑体
     \TimesNewRoman \zihao{4} \noindent % 内容为四号Times New Roman
 }
 {
