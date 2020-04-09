@@ -12,7 +12,7 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 本项目的目的是为了创建一个符合中南大学研究生学位论文（博士）撰写规范的TeX模板，解决学位论文撰写时格式调整的痛点。
 
-本模板依照[《中南大学研究生学位论文撰写规范》中大研字【2020】30号编写。
+本模板依照《中南大学研究生学位论文撰写规范》中大研字【2020】30号编写。
 
 ## 主要内容
 
@@ -47,6 +47,7 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 对LaTeX有所了解的同学，也可按需修改这个文件。如果这个文件的样式设计有什么bug，欢迎在issue里提出。
 
+
 ### `gbt7714-unsrt.bst`和`gbt7714.sty`两个文件
 
 来自项目[CTeX-org/gbt7714-bibtex-style](https://github.com/CTeX-org/gbt7714-bibtex-style)，是参考文献的样式，与学校论文撰写规范一致。
@@ -80,7 +81,7 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 注意：
 1. 除`TexMaker`等IDE外，请使用如sublime等高级编辑器，否则可能因为ANSI、UTF-8等编码格式问题编译失败；
-2. 使用MiKTex包而不是TexLive时，图片请`不要使用` eps 格式，MiKTex包的xelatex编译器”no Encapsulated PostScript (EPS) graphics are supported”。
+2. 使用MiKTex包而不是TexLive时，图片请`不要使用` eps 格式，MiKTex包的xelatex编译器“has no Encapsulated PostScript (EPS) graphics are supported”。
 
 
 ## 一些毕业流程上与word差异的考虑
