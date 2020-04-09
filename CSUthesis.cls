@@ -321,7 +321,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand{\announcement}{
     % 按学校模板这里是华文新魏字体
 
-    \linespread{1.45} % 这部分的行间距跟正文不一样
+    \renewcommand{\baselinestretch}{1.45} % 这部分的行间距跟正文不一样
     {~}
     \vspace{10pt}
 
@@ -386,7 +386,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 
 \RequirePackage{printlen} %调试
-%current \texttt{baselineskip}: \printlength{\baselineskip};current \texttt{baselinestretch}: \baselinestretch;
+%current \texttt{baselineskip} =\printlength{\baselineskip}; \texttt{baselinestretch} = \baselinestretch. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. 中文摘要
 % -----------------------------------------------%
