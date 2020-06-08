@@ -462,9 +462,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \titleformat{\section}{\zihao{3} \bfseries \heiti}{第{\thesection}章}{1em}{\centering} % 正文章名居中
 \titlespacing*{\section} {0pt}{18pt}{12pt}
 \titleformat{\subsection}{\zihao{4} \songti}{\thesubsection}{1em}{}
-\titlespacing*{\subsection} {0pt}{12pt}{3pt}
+\titlespacing*{\subsection} {0pt}{10pt}{8pt}
 \titleformat{\subsubsection}{\zihao{-4} \songti}{\thesubsubsection}{1em}{}
-\titlespacing*{\subsubsection} {0pt}{12pt}{3pt}
+\titlespacing*{\subsubsection} {0pt}{10pt}{8pt}
 \titleformat{\paragraph}{\zihao{-4} \songti}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph} {0pt}{12pt}{3pt}
 \titleformat{\subparagraph}{\zihao{-4} \songti}{(\arabic{subparagraph})}{1em}{}
