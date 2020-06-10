@@ -107,6 +107,14 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 磅和 LaTeX的 pt- points (大约 1/72 inch) 是一致的。
 \renewcommand*{\baselinestretch}{1.0}   % 几倍行间距
 \setlength{\baselineskip}{20pt}         % 基准行间距
+\setlength{\parskip}{0pt}         % 基准行间距
+%行间距：\lineskip = \baselineskip * \baselinestretch
+%段间距：\lineskip + \parskip
+%三号字体的磅值是16磅
+%小三号字体的磅值是15磅
+%四号字体的磅值是14磅
+%小四号字体的磅值是12磅
+%五号字体的磅值是10.5磅，本源码按10磅计算
 
 \setlength{\bibsep}{0.5ex} % 参考文献条目间距
 
@@ -209,32 +217,30 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     {
         \centering
         \linespread{1.5}
-        \vspace*{1.5cm}
+        \vspace*{4.5cm}
         {\zihao{-2} \bfseries \heiti \thesistypefinal \par} % 小二号黑体
-        \vspace{2cm} % 两个空行
+        \vspace{1.5cm} % 两个空行
         {\zihao{2} \bfseries \heiti \@titlecn \par} % 二号黑体
-        {\zihao{-2}\bfseries \TimesNewRoman \@titleen \par} % 小二号，timesnewroman
-        \vspace{4cm} % 两个空行
+        {\zihao{-2} \bfseries \TimesNewRoman \@titleen \par} % 小二号，timesnewroman
+        \vspace{1.25cm} % 两个空行
         {
-            \zihao{3} \songti
+            \zihao{3} \bfseries \songti
+            \setlength\parindent{2em} % 由于这里填写的内容不对称，完全居中反而不够美观，于是缩进一个汉字的宽度
             \begin{tabular}{ll}
-                \makebox[4em][s]{学科专业} & \@priormajor \\
-                \makebox[4em][s]{学科方向} & \@minormajor \\        
-\ifblindreview
-                \makebox[4em][s]{研究方向} & \@interestmajor \\
-                \makebox[4em][s]{学   号}  & \@studentid \\
-\else
-                \makebox[4em][s]{作者姓名} & \@author \\
-                \makebox[4em][s]{指导教师} & \@supervisor \\
-\fi
+                % 利用\makebox[7em][s]{} 实现两端对齐，即字数不同但左右对齐。
+                % 7em表示分散对齐的最长的长度为7个字的长度，参数s表示两端分散对齐。
+                \makebox[6em][s]{学科专业}      &  \makebox[14em]{\@priormajor}    \\[0pt]
+                \makebox[6em][s]{学科方向}      &  \makebox[14em]{\@minormajor}    \\[0pt]
+                \makebox[6em][s]{作者姓名}      &  \makebox[14em]{\@author}        \\[0pt]
+                \makebox[6em][s]{指导教师}      &  \makebox[14em]{\@supervisor}    \\[0pt]
             \end{tabular}
         }
         \par
-        \vspace{4cm} 
+        \vspace{3.5cm} 
         % \vfill
         {
             \centering
-            {\centering \zihao{-3} \songti 中\quad 南\quad 大\quad 学 \par} 
+            {\centering \zihao{-3} \songti  \quad  \quad  \quad  \par} 
             {\centering \zihao{-3} \songti \@thesisdate \par}
         }
     }
@@ -460,15 +466,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 %               {before-code}%定义标题前的内容
 %               [after-code]%定义标题后的内容
 \titleformat{\section}{\zihao{3} \bfseries \heiti}{第{\thesection}章}{1em}{\centering} % 正文章名居中
-\titlespacing*{\section} {0pt}{18pt}{12pt}
+\titlespacing{\section} {0pt}{18pt}{12pt}
 \titleformat{\subsection}{\zihao{4} \songti}{\thesubsection}{1em}{}
-\titlespacing*{\subsection} {0pt}{10pt}{8pt}
+\titlespacing{\subsection} {0pt}{12pt}{4pt}
 \titleformat{\subsubsection}{\zihao{-4} \songti}{\thesubsubsection}{1em}{}
-\titlespacing*{\subsubsection} {0pt}{10pt}{8pt}
+\titlespacing{\subsubsection} {0pt}{11pt}{4pt}
 \titleformat{\paragraph}{\zihao{-4} \songti}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph} {0pt}{12pt}{3pt}
+\titlespacing{\paragraph} {0pt}{11pt}{4pt}
 \titleformat{\subparagraph}{\zihao{-4} \songti}{(\arabic{subparagraph})}{1em}{}
-\titlespacing*{\subparagraph} {2em}{12pt}{3pt}
+\titlespacing{\subparagraph} {2em}{11pt}{4pt}
 % 定义在目录中的格式
 % \titlecontents{标题名}
 %               [左间距]
