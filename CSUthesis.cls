@@ -231,8 +231,13 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
                 % 7em表示分散对齐的最长的长度为7个字的长度，参数s表示两端分散对齐。
                 \makebox[6em][s]{学科专业}      &  \makebox[14em]{\@priormajor}    \\[0pt]
                 \makebox[6em][s]{学科方向}      &  \makebox[14em]{\@minormajor}    \\[0pt]
+\ifblindreview
+                \makebox[6em][s]{研究方向}      &  \makebox[14em]{\@interestmajor}        \\[0pt]
+                \makebox[6em][s]{学   号}      &  \makebox[14em]{\@studentid}    \\[0pt]
+\else
                 \makebox[6em][s]{作者姓名}      &  \makebox[14em]{\@author}        \\[0pt]
                 \makebox[6em][s]{指导教师}      &  \makebox[14em]{\@supervisor}    \\[0pt]
+\fi
             \end{tabular}
         }
         \par
