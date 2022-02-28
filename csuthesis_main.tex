@@ -5,6 +5,10 @@
 
 \usepackage{adjustbox}
 
+%使用“\citeup”代替“\cite”, 可将参考文献引用放在右上角
+\usepackage{natbib}
+\newcommand\citeup[1]{{\setcitestyle{square,super}\cite{#1}}}
+
 \usepackage[figure,table]{totalcount}
 \usepackage{totcount}
 %参考文献计数
